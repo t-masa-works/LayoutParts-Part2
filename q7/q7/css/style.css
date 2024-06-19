@@ -1,1 +1,40 @@
 @charset "UTF-8";
+
+.text-box {
+  width: 500px;
+  background: #fad296;
+  border: solid 5px #8f5a0a;
+  border-radius: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.text {
+  padding: 20px;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.text-box::before,
+.text-box::after {
+  position: absolute;
+  content: "";
+  left: 13px;
+  width: 36px;
+  border-style: solid;
+  border-width: 35px 0 35px 37px;
+  transform: rotate(90deg);
+}
+
+.text-box::before {
+  bottom: -55px;
+  border-color: transparent transparent transparent #fad296;
+  z-index: 10;
+}
+
+.text-box::after {
+  bottom: -63px;
+  border-color: transparent transparent transparent #8f5a0a;
+  z-index: -10;
+}
